@@ -1,0 +1,89 @@
+[
+  {
+    "class": "asan-legacy_count-e8f10b71",
+    "fingerprint": "asan:legacy_count@legacy_tlv.c:221:28|legacy_count@legacy_tlv.c:223:22|LLVMFuzzerTestOneInput@fuzz_legacy.c:27:11",
+    "kind": "asan",
+    "detail": "heap-use-after-free on address 0x61e0000000a0 at pc 0x0001049668ec bp 0x00016b49a340 sp 0x00016b49a338",
+    "frames": [
+      "legacy_count@legacy_tlv.c:221:28",
+      "legacy_count@legacy_tlv.c:223:22",
+      "LLVMFuzzerTestOneInput@fuzz_legacy.c:27:11",
+      "start+0x1fdfc",
+      "free+0x554fc",
+      "legacy_parse_scope@legacy_tlv.c:161:5",
+      "legacy_parse@legacy_tlv.c:198:13",
+      "LLVMFuzzerTestOneInput@fuzz_legacy.c:21:11"
+    ],
+    "artifacts": 6581,
+    "live": 6581,
+    "reproduces": true,
+    "sample": "corpus/regression/asan-legacy_count-e8f10b71.tlv",
+    "original_size": 28,
+    "minimized_size": 15,
+    "minimized_reproduces": true
+  },
+  {
+    "class": "asan-legacy_read_len-8d94b09d",
+    "fingerprint": "asan:legacy_read_len@legacy_tlv.c:60:72|legacy_parse_scope@legacy_tlv.c:119:13|legacy_parse@legacy_tlv.c:198:13",
+    "kind": "asan",
+    "detail": "heap-buffer-overflow on address 0x6020000001a0 at pc 0x000104f6a038 bp 0x00016ae960d0 sp 0x00016ae960c8",
+    "frames": [
+      "legacy_read_len@legacy_tlv.c:60:72",
+      "legacy_parse_scope@legacy_tlv.c:119:13",
+      "legacy_parse@legacy_tlv.c:198:13",
+      "LLVMFuzzerTestOneInput@fuzz_legacy.c:21:11",
+      "start+0x1fdfc",
+      "_Znam+0x65570",
+      "start+0x1fdfc"
+    ],
+    "artifacts": 1,
+    "live": 1,
+    "reproduces": true,
+    "sample": "corpus/regression/asan-legacy_read_len-8d94b09d.tlv",
+    "original_size": 16,
+    "minimized_size": 16,
+    "minimized_reproduces": true
+  },
+  {
+    "class": "asan-legacy_read_len-36724563",
+    "fingerprint": "asan:legacy_read_len@legacy_tlv.c:60:57|legacy_parse_scope@legacy_tlv.c:119:13|legacy_parse@legacy_tlv.c:198:13",
+    "kind": "asan",
+    "detail": "heap-buffer-overflow on address 0x60200000019f at pc 0x000100c025e4 bp 0x00016f1fe0d0 sp 0x00016f1fe0c8",
+    "frames": [
+      "legacy_read_len@legacy_tlv.c:60:57",
+      "legacy_parse_scope@legacy_tlv.c:119:13",
+      "legacy_parse@legacy_tlv.c:198:13",
+      "LLVMFuzzerTestOneInput@fuzz_legacy.c:21:11",
+      "start+0x1fdfc",
+      "_Znam+0x65570",
+      "start+0x1fdfc"
+    ],
+    "artifacts": 1,
+    "live": 1,
+    "reproduces": true,
+    "sample": "corpus/regression/asan-legacy_read_len-36724563.tlv",
+    "original_size": 15,
+    "minimized_size": 15,
+    "minimized_reproduces": true
+  },
+  {
+    "class": "assert-legacy_decode_value-97d44ecd",
+    "fingerprint": "assert:legacy_decode_value@legacy_tlv.c:80:16|legacy_parse_scope@legacy_tlv.c:145:13|legacy_parse@legacy_tlv.c:198:13",
+    "kind": "assert",
+    "detail": "deadly signal",
+    "frames": [
+      "legacy_decode_value@legacy_tlv.c:80:16",
+      "legacy_parse_scope@legacy_tlv.c:145:13",
+      "legacy_parse@legacy_tlv.c:198:13",
+      "LLVMFuzzerTestOneInput@fuzz_legacy.c:21:11",
+      "start+0x1fdfc"
+    ],
+    "artifacts": 1,
+    "live": 1,
+    "reproduces": true,
+    "sample": "corpus/regression/assert-legacy_decode_value-97d44ecd.tlv",
+    "original_size": 1040,
+    "minimized_size": 1040,
+    "minimized_reproduces": true
+  }
+]
